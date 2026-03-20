@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rushikesh Bade — Portfolio</title>
+
+  <!-- Bootstrap 5 CSS CDN — for responsive grid and utility classes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons CDN — for all icons used throughout the site -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts: Plus Jakarta Sans + JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- Our custom stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR — Fixed top navigation bar
+       Bootstrap navbar with custom dark styling
+       Logo on left, nav links on right, hamburger on mobile
+  ============================================================ -->
+  <nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Brand / Logo -->
+      <a class="navbar-brand" href="#home">&lt;Rushikesh /&gt;</a>
+
+      <!-- Mobile hamburger toggle (Bootstrap handles the collapse) -->
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible nav links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HOME / HERO SECTION
+       Full-viewport intro with name, role, tagline, CTA buttons
+       and a code-style display card on the right
+  ============================================================ -->
+  <section id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Left: Text content -->
+        <div class="col-lg-6">
+          <p class="hero-tag">// Welcome to my portfolio</p>
+          <h1 class="hero-title">
+            Hi, I'm <span class="grad-text">Rushikesh<br/>Bade</span>
+          </h1>
+          <p class="hero-subtitle">
+            Computer Engineering Student &nbsp;|&nbsp; Web Developer
+          </p>
+          <p class="hero-tagline">
+            Building impactful web solutions for real-world problems —
+            from healthcare platforms to food donation systems.
+          </p>
+          <!-- CTA Buttons -->
+          <div class="hero-btns">
+            <a href="#projects" class="btn-grad">
+              <i class="bi bi-grid-3x3-gap-fill"></i> View Projects
+            </a>
+            <a href="#resume" class="btn-outline-grad">
+              <i class="bi bi-download"></i> Download Resume
+            </a>
+          </div>
+
+          <!-- Social media icon pills -->
+          <div class="hero-socials mt-4">
+            <a href="https://www.linkedin.com/in/rushikesh-bade-9b7334325" target="_blank" class="social-pill" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/rushi4949" target="_blank" class="social-pill" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.instagram.com/rushibade_7" target="_blank" class="social-pill" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1CWpH3k3X1/" target="_blank" class="social-pill" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Code-style card simulating a JS object -->
+        <div class="col-lg-6">
+          <div class="hero-card">
+            <div><span class="line-num">1</span><span class="com">// Developer Profile</span></div>
+            <div><span class="line-num">2</span><span class="kw">const </span><span class="fn">developer</span> = {</div>
+            <div><span class="line-num">3</span>&nbsp;&nbsp;name: <span class="str">"Rushikesh Bade"</span>,</div>
+            <div><span class="line-num">4</span>&nbsp;&nbsp;role: <span class="str">"Web Developer"</span>,</div>
+            <div><span class="line-num">5</span>&nbsp;&nbsp;college: <span class="str">"PCCOE, Pune"</span>,</div>
+            <div><span class="line-num">6</span>&nbsp;&nbsp;skills: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JS"</span>],</div>
+            <div><span class="line-num">7</span>&nbsp;&nbsp;passion: <span class="str">"Social Impact"</span>,</div>
+            <div><span class="line-num">8</span>&nbsp;&nbsp;projects: <span class="num">2</span>,</div>
+            <div><span class="line-num">9</span>&nbsp;&nbsp;available: <span class="kw">true</span></div>
+            <div><span class="line-num">10</span>};</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT SECTION
+       Left: Avatar card with stats | Right: Bio paragraph + chips
+  ============================================================ -->
+  <section id="about" class="section-wrap bg-alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Left: Avatar visual card -->
+        <div class="col-lg-4 reveal">
+          <div class="about-visual">
+            <div class="avatar-circle">RB</div>
+            <div class="about-name">Rushikesh Bade</div>
+            <div class="about-role">// CE Student @ PCCOE</div>
+            <!-- Mini stats grid -->
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="num">2+</div>
+                <div class="lbl">Projects</div>
+              </div>
+              <div class="about-stat">
+                <div class="num">7</div>
+                <div class="lbl">Skills</div>
+              </div>
+              <div class="about-stat">
+                <div class="num">∞</div>
+                <div class="lbl">Curiosity</div>
+              </div>
+              <div class="about-stat">
+                <div class="num">24/7</div>
+                <div class="lbl">Learning</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: About text -->
+        <div class="col-lg-8 reveal">
+          <span class="section-tag">// About Me</span>
+          <h2 class="section-title">Who I <span class="grad-text">Am</span></h2>
+          <div class="section-line"></div>
+          <p class="about-para">
+            I'm <strong>Rushikesh Bade</strong>, a passionate Computer Engineering
+            student at <strong class="text-cyan">Pimpri Chinchwad College of Engineering, Pune</strong>,
+            driven by a deep interest in building web solutions that create real-world impact.
+            I believe technology is most powerful when it solves human problems — whether making
+            healthcare information accessible or connecting food donors with people in need.
+          </p>
+          <p class="about-para mt-3">
+            My skill set spans frontend development with <strong>HTML, CSS, and JavaScript</strong>,
+            systems programming with <strong>C and C++</strong>, scripting with <strong>Python</strong>,
+            and data management with <strong>MongoDB</strong>. I approach every project with a learning
+            mindset — curious, persistent, and focused on clean, user-centered design.
+          </p>
+          <!-- Info chips -->
+          <div class="about-chips">
+            <span class="chip"><i class="bi bi-geo-alt-fill me-1"></i>Pune, Maharashtra</span>
+            <span class="chip"><i class="bi bi-mortarboard-fill me-1"></i>B.E. Computer Engineering</span>
+            <span class="chip"><i class="bi bi-envelope-fill me-1"></i>rushikeshb505@gmail.com</span>
+            <span class="chip"><i class="bi bi-telephone-fill me-1"></i>7666656301</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SKILLS SECTION
+       8 skill cards in a responsive grid
+       Each has an icon, name, category label, and progress bar
+  ============================================================ -->
+  <section id="skills" class="section-wrap">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">// Technologies</span>
+        <h2 class="section-title">My <span class="grad-text">Skills</span></h2>
+        <div class="section-line mx-auto"></div>
+        <p class="section-desc mx-auto mt-2">Frontend, backend, and programming languages I work with</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- HTML -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon cyan"><i class="bi bi-filetype-html"></i></div>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-cat">Frontend</div>
+            <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon violet"><i class="bi bi-filetype-css"></i></div>
+            <div class="skill-name">CSS3</div>
+            <div class="skill-cat">Frontend</div>
+            <div class="skill-bar"><div class="skill-fill violet" style="width:88%"></div></div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon orange"><i class="bi bi-filetype-js"></i></div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-cat">Frontend</div>
+            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+          </div>
+        </div>
+
+        <!-- C++ -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon pink"><i class="bi bi-code-slash"></i></div>
+            <div class="skill-name">C++</div>
+            <div class="skill-cat">Programming</div>
+            <div class="skill-bar"><div class="skill-fill violet" style="width:82%"></div></div>
+          </div>
+        </div>
+
+        <!-- C -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon cyan"><i class="bi bi-terminal-fill"></i></div>
+            <div class="skill-name">C Language</div>
+            <div class="skill-cat">Programming</div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon green"><i class="bi bi-filetype-py"></i></div>
+            <div class="skill-name">Python</div>
+            <div class="skill-cat">Scripting</div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:74%"></div></div>
+          </div>
+        </div>
+
+        <!-- MongoDB -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon green"><i class="bi bi-database-fill"></i></div>
+            <div class="skill-name">MongoDB</div>
+            <div class="skill-cat">Database</div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:70%"></div></div>
+          </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="skill-card">
+            <div class="skill-icon violet"><i class="bi bi-bootstrap-fill"></i></div>
+            <div class="skill-name">Bootstrap</div>
+            <div class="skill-cat">UI Framework</div>
+            <div class="skill-bar"><div class="skill-fill violet" style="width:80%"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       Two project cards: SwasthCare and Annadata
+       Each has a colored banner, title, description, tags, button
+  ============================================================ -->
+  <section id="projects" class="section-wrap bg-alt">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">// My Work</span>
+        <h2 class="section-title">Featured <span class="grad-text">Projects</span></h2>
+        <div class="section-line mx-auto"></div>
+        <p class="section-desc mx-auto mt-2">Web solutions built to solve real social and health challenges</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Project 1: SwasthCare -->
+        <div class="col-md-6 col-lg-5 reveal">
+          <div class="project-card">
+            <!-- Colored top banner with emoji -->
+            <div class="project-banner health">🏥</div>
+            <div class="project-body">
+              <div class="project-tag">// Healthcare Platform</div>
+              <h3 class="project-title">SwasthCare</h3>
+              <p class="project-desc">
+                A web platform focused on disease prevention, health tips, and accessible
+                healthcare information. Features health calculators, hospital listings,
+                doctor directories, and awareness content to help users make informed
+                health decisions.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill blue">HTML</span>
+                <span class="tag-pill blue">CSS</span>
+                <span class="tag-pill blue">JavaScript</span>
+                <span class="tag-pill blue">MongoDB</span>
+              </div>
+              <a href="#" class="btn-grad btn-sm-custom">
+                <i class="bi bi-box-arrow-up-right"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Annadata -->
+        <div class="col-md-6 col-lg-5 reveal">
+          <div class="project-card">
+            <div class="project-banner food">🌾</div>
+            <div class="project-body">
+              <div class="project-tag">// Food Donation Platform</div>
+              <h3 class="project-title">Annadata</h3>
+              <p class="project-desc">
+                A website that connects food donors with NGOs to reduce food wastage
+                and distribute excess food to those in need. Streamlines donation with
+                real-time NGO listings, pickup scheduling, and donation tracking.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill emerald">HTML</span>
+                <span class="tag-pill emerald">CSS</span>
+                <span class="tag-pill emerald">JavaScript</span>
+                <span class="tag-pill emerald">Python</span>
+              </div>
+              <a href="#" class="btn-grad btn-sm-custom btn-green">
+                <i class="bi bi-box-arrow-up-right"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RESUME SECTION
+       Left: Education timeline | Right: Skills + Download button
+  ============================================================ -->
+  <section id="resume" class="section-wrap">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">// Credentials</span>
+        <h2 class="section-title">My <span class="grad-text">Resume</span></h2>
+        <div class="section-line mx-auto"></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Education Timeline -->
+        <div class="col-lg-6 reveal">
+          <div class="resume-card">
+            <h5 class="resume-card-title">
+              <i class="bi bi-mortarboard-fill me-2 text-cyan"></i>Education
+            </h5>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="bi bi-building"></i></div>
+              <div>
+                <div class="timeline-year">2023 — Present</div>
+                <div class="timeline-title">B.E. Computer Engineering</div>
+                <div class="timeline-sub">Pimpri Chinchwad College of Engineering, Pune</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="bi bi-book-fill"></i></div>
+              <div>
+                <div class="timeline-year">2021 — 2023</div>
+                <div class="timeline-title">HSC — Science (12th)</div>
+                <div class="timeline-sub">Maharashtra State Board</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="bi bi-pencil-fill"></i></div>
+              <div>
+                <div class="timeline-year">2021</div>
+                <div class="timeline-title">SSC — 10th Standard</div>
+                <div class="timeline-sub">Maharashtra State Board</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights + Download -->
+        <div class="col-lg-5 reveal">
+          <div class="resume-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="resume-card-title">
+                <i class="bi bi-stars me-2 text-violet"></i>Highlights
+              </h5>
+              <ul class="highlights-list">
+                <li><i class="bi bi-check-circle-fill text-green me-2"></i>Frontend: HTML, CSS, JavaScript, Bootstrap</li>
+                <li><i class="bi bi-check-circle-fill text-green me-2"></i>Programming: C, C++, Python</li>
+                <li><i class="bi bi-check-circle-fill text-green me-2"></i>Database: MongoDB</li>
+                <li><i class="bi bi-check-circle-fill text-green me-2"></i>Projects: SwasthCare, Annadata</li>
+                <li><i class="bi bi-check-circle-fill text-green me-2"></i>Open to internships &amp; collaborations</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="#" class="btn-grad d-flex justify-content-center">
+                <i class="bi bi-file-earmark-arrow-down-fill me-2"></i> Download Full Resume
+              </a>
+              <p class="resume-note">PDF format · Last updated 2025</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+       Left: Contact info card | Right: Contact form
+  ============================================================ -->
+  <section id="contact" class="section-wrap bg-alt">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">// Get In Touch</span>
+        <h2 class="section-title">Contact <span class="grad-text">Me</span></h2>
+        <div class="section-line mx-auto"></div>
+        <p class="section-desc mx-auto mt-2">Got a project idea or want to collaborate? Reach out anytime!</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Contact Info Card -->
+        <div class="col-lg-4 reveal">
+          <div class="contact-info-card">
+            <h5 class="contact-card-title">Let's Connect</h5>
+
+            <div class="contact-item">
+              <div class="contact-icon cyan"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="contact-lbl">Email</div>
+                <div class="contact-val">
+                  <a href="mailto:rushikeshb505@gmail.com">rushikeshb505@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon violet"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <div class="contact-lbl">Phone</div>
+                <div class="contact-val">
+                  <a href="tel:7666656301">+91 7666656301</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon cyan"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <div class="contact-lbl">Location</div>
+                <div class="contact-val">Pune, Maharashtra, India</div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <div class="contact-lbl mb-3">Follow Me</div>
+              <div class="d-flex gap-2 flex-wrap">
+                <a href="https://www.linkedin.com/in/rushikesh-bade-9b7334325" target="_blank" class="social-pill"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/rushi4949" target="_blank" class="social-pill"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/rushibade_7" target="_blank" class="social-pill"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1CWpH3k3X1/" target="_blank" class="social-pill"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-6 reveal">
+          <div class="contact-form-card">
+            <h5 class="contact-card-title">Send a Message</h5>
+            <!-- onsubmit calls handleForm() in script.js -->
+            <form onsubmit="handleForm(event)">
+              <div class="mb-1">
+                <div class="form-label-custom">Your Name</div>
+                <input type="text" class="form-input" placeholder="Enter your name" required/>
+              </div>
+              <div class="mb-1">
+                <div class="form-label-custom">Email Address</div>
+                <input type="email" class="form-input" placeholder="your@email.com" required/>
+              </div>
+              <div class="mb-1">
+                <div class="form-label-custom">Message</div>
+                <textarea class="form-input" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn-grad d-flex justify-content-center w-100">
+                <i class="bi bi-send-fill me-2"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       Logo + quick links + social icons + copyright
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center gy-4">
+
+        <!-- Logo + copyright -->
+        <div class="col-md-4">
+          <div class="footer-logo">&lt;Rushikesh Bade /&gt;</div>
+          <div class="footer-sub">Computer Engineering Student · Web Developer</div>
+          <div class="footer-copy">© 2025 <span class="text-cyan">Rushikesh Bade</span>. All rights reserved.</div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-md-4 text-md-center">
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Social icons -->
+        <div class="col-md-4 text-md-end">
+          <div class="d-flex gap-2 justify-content-md-end flex-wrap">
+            <a href="https://www.linkedin.com/in/rushikesh-bade-9b7334325" target="_blank" class="social-pill"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/rushi4949" target="_blank" class="social-pill"><i class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/rushibade_7" target="_blank" class="social-pill"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1CWpH3k3X1/" target="_blank" class="social-pill"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap 5 JS CDN — required for navbar mobile collapse -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Our custom JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
